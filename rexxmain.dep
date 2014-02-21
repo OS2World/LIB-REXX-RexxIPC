@@ -1,0 +1,23 @@
+# IBM Developer's Workframe/2 Make File Creation run at 10:49:45 on 10/21/95
+
+# Make File Creation run in directory:
+#   E:\PROJECT\PERS\REXXIPC;
+
+# Assumed INCLUDE environment variable path:
+#   S:\USR\INCLUDE;
+#   F:\TOOLKT21\CPLUS\OS2H;
+#   F:\TOOLKT21\C\OS2H;
+#   S:\IBMCPP\INCLUDE;
+#   S:\IBMCPP\IBMCLASS;
+#   S:\QELIB;
+
+
+INCLUDE000=$(INCLUDE)
+
+
+REXXMAIN.OBJ:  REXXMAIN.C  \
+#  {$(INCLUDE000)}rexxsaa.h  \
+#  {$(INCLUDE000)}stdlib.h  \
+#  {$(INCLUDE000)}string.h  \
+#  {$(INCLUDE000)}stdio.h  \
+   REXXMAIN.MAK

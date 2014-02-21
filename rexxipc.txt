@@ -1,0 +1,189 @@
+$Id: rexxipc.txt,v 1.7 1997/04/26 13:09:44 SFB Exp $
+
+$Title: RexxIPC distribution text. $
+
+Copyright (c) Serge Brisson, 1994-1997.
+
+
+REXXIPC V1.30-001
+-----------------
+
+
+DESCRIPTION
+
+The RexxIPC library provides access to OS/2 Inter
+Process Communication capabilities for Rexx programs.
+Threads, named pipes, semaphores (event, mutex and
+muxwait) and queues are supported.
+
+
+DISTRIBUTION
+
+The copyright owner allows the free distribution
+of the following files, as long as they are kept
+together, unmodified:
+
+    REXXIPC.DLL -- The library.
+    REXXIPC.INF -- The documentation.
+    REXXIPC.TXT -- This text.
+    TESTIPC.CMD -- A test program.
+    TESTIPC.CFG -- A test configuration.
+    FILE_ID.DIZ -- Identification.
+
+
+INSTALLATION
+
+The file REXXIPC.DLL should be put in a directory
+listed in the LIBPATH statement (CONFIG.SYS).
+
+For easy access, the file REXXIPC.INF may be put in
+a directory listed in the BOOKSHELF statement (also
+in CONFIG.SYS).
+
+The following Rexx commands should be executed, either
+at system startup, or at the beginning of the Rexx files
+using RexxIPC:
+
+    call RxFuncAdd 'IPCLoadFuncs', 'REXXIPC', 'IPCLoadFuncs'
+    call IPCLoadFuncs
+
+Please note that the third parameter of the call to
+RxFuncAdd ('IPCLoadFuncs') is case sensitive.
+
+When executing the TestIPC program, the file TESTIPC.CFG
+must be in the same directory as TESTIPC.CMD.
+
+
+PROBLEMS
+
+Since this library is used in a production environment,
+the author is interested in problem reports.
+
+Although this is not a guarantee, informations on serious
+difficulties may lead to a post of a corrected library.
+
+Internet: sfb@acm.org
+
+
+NOTE
+
+The documentation assumes that the user has other sources
+of information on the OS/2 Control Program API.
+
+
+HISTORY
+
+V1.00 February 1994
+
+    Initial release version.
+
+    Released in March for free distribution.
+
+
+V1.01 March 1994
+
+    The Proc module (ProcSendSignal, ProcSet*Priority) is added.
+
+
+V1.02 April 1994
+
+    The PipeConnectAsync function is added to close a window
+    in the interaction with I/O redirected processes.
+
+    The IPCContext routines are added to support multi-thread
+    functions (like PipeConnectAsync).
+
+    The SemMuxWait functions are added.
+
+
+V1.03 April 1994
+
+    A window in thread context processing is closed.
+
+    The PipePeek function is added.
+
+    Hypertext links are added to the documentation.
+
+
+V1.04 April 1994
+
+    The functions SemStartTimer and SemStopTimer are added.
+
+    Support for shared unnamed semaphores is added.
+
+
+V1.05 April 1994
+
+    The function IPCContextWait is added.
+
+    Index entries are added to the documentation.
+
+    PipeDisConnect is renamed to PipeDisconnect.
+    SemMuxWait functions are renamed to SemMuxwait.
+    SemMuxwaitDelete is renamed to SemMuxwaitRemove.
+
+
+V1.10 July 1994
+
+    Second release version.
+
+    Released in August for free distribution.
+
+
+V1.11 October 1994
+
+    Fixed a potential problem by a more systematic use
+    of tiled memory for read/write on pipes.
+
+
+V1.12 May 1995
+
+    The function PipeSetSem is added.
+
+    The function ProcCreateThread is added.
+    IPCContextQuery gets an optional thread parameter.
+    The function IPCContextResult is added.
+
+
+V1.13 May 1995
+
+    The documentation is updated.
+
+    Local distribution.
+
+
+V1.20 June 1995
+
+    Released for free distribution.
+
+
+V1.21 August 1995
+
+    The function PipeReadAsync is added.
+    The function PipeWriteAsync is added.
+    The semaphore open functions can now open unnamed
+    semaphores.
+    The function ProcGetThreadInfo is added.
+
+    The TestIPC program is added.
+    Expected return codes are added to the documentation.
+
+    Released in September for free distribution.
+
+
+V1.30 October 1995
+
+    The Queue functions are added.
+    The documentation is updated.
+    A bug in keyword recognition is found and corrected.
+
+    Released in January for free distribution.
+
+
+V1.30-001 April 1997
+
+    A bug affecting QueuePeek is found and corrected.
+
+
+---
+

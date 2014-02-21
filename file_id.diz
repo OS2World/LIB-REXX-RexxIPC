@@ -1,0 +1,7 @@
+RexxIPC V1.30-001.
+Rexx access to OS/2 IPC services.
+The RexxIPC library provides access to OS/2 Inter
+Process Communication capabilities for Rexx programs.
+Threads, named pipes, semaphores (event, mutex and
+muxwait) and queues are supported.
+

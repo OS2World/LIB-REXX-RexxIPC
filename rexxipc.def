@@ -1,0 +1,93 @@
+; $Id: rexxipc.def,v 1.4 1996/01/14 11:56:11 SFB Rel $
+
+; $Title: RexxIPC DLL definition file. $
+
+; Copyright (c) Serge Brisson 1994.
+
+LIBRARY REXXIPC INITINSTANCE
+PROTMODE
+DATA MULTIPLE NONSHARED LOADONCALL
+
+EXPORTS
+        IPCLoadFuncs
+        IPCDropFuncs
+        IPCContextClose
+        IPCContextCreate
+        IPCContextQuery
+        IPCContextResult
+        IPCContextWait
+        IPCVersion
+        PipeLoadFuncs
+        PipeDropFuncs
+        PipeCall
+        PipeClose
+        PipeConnect
+        PipeConnectAsync
+        PipeCreate
+        PipeDisconnect
+        PipeFlush
+        PipeOpen
+        PipePeek
+        PipeRead
+        PipeReadAsync
+        PipeSetSem
+        PipeTransact
+        PipeWait
+        PipeWrite
+        PipeWriteAsync
+        ProcLoadFuncs
+        ProcDropFuncs
+        ProcCreateThread
+        ProcGetThreadInfo
+        ProcSendSignal
+        ProcSetPriority
+        ProcSetThreadPriority
+        ProcSetTreePriority
+        QueueLoadFuncs
+        QueueDropFuncs
+        QueueClose
+        QueueCreate
+        QueueOpen
+        QueuePeek
+        QueuePurge
+        QueueQuery
+        QueueRead
+        QueueWrite
+        SemLoadFuncs
+        SemDropFuncs
+        SemEventClose
+        SemEventCreate
+        SemEventOpen
+        SemEventPost
+        SemEventQuery
+        SemEventReset
+        SemEventWait
+        SemMutexClose
+        SemMutexCreate
+        SemMutexOpen
+        SemMutexQuery
+        SemMutexRelease
+        SemMutexRequest
+        SemMuxwaitAdd
+        SemMuxwaitClose
+        SemMuxwaitCreate
+        SemMuxwaitOpen
+        SemMuxwaitRemove
+        SemMuxwaitWait
+        SemStartTimer
+        SemStopTimer
+
+; $Log: rexxipc.def,v $
+; Revision 1.4  1996/01/14 11:56:11  SFB
+; Queue functions added.
+;
+; Revision 1.3  1995/09/17 13:01:41  SFB
+; Adds PipeRead/WriteAsync and ProcGetThreadInfo.
+;
+; Revision 1.2  1995/05/22 21:11:19  SFB
+; Added IPCContextResult.
+; Added ProcCreateThread.
+;
+; 
+; Revision 1.1  1994/05/12  21:09:00  SFB
+; Initial revision

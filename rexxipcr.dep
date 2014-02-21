@@ -1,0 +1,67 @@
+# IBM Developer's Workframe/2 Make File Creation run at 11:12:43 on 04/26/97
+
+# Make File Creation run in directory:
+#   E:\PROJECT\PERS\REXXIPC;
+
+# Assumed INCLUDE environment variable path:
+#   S:\USR\INCLUDE;
+#   F:\TOOLKT21\CPLUS\OS2H;
+#   F:\TOOLKT21\C\OS2H;
+#   S:\IBMCPP\INCLUDE;
+#   S:\IBMCPP\IBMCLASS;
+#   S:\QELIB;
+
+
+INCLUDE001=.
+INCLUDE001=$(INCLUDE001);$(INCLUDE)
+
+INCLUDE000=$(INCLUDE)
+
+
+REXXIPC.OBJ:  REXXIPC.C  \
+#  {$(INCLUDE000)}rexxsaa.h  \
+#  {$(INCLUDE000)}stdlib.h  \
+   {$(INCLUDE001)}rxapiutl.h  \
+   {$(INCLUDE001)}rexxipc.h  \
+   {$(INCLUDE001)}rexxsem.h  \
+   REXXIPCR.MAK
+
+REXXPIPE.OBJ:  REXXPIPE.C  \
+#  {$(INCLUDE000)}rexxsaa.h  \
+#  {$(INCLUDE000)}stdlib.h  \
+#  {$(INCLUDE000)}string.h  \
+   {$(INCLUDE001)}rxapiutl.h  \
+   {$(INCLUDE001)}rexxipc.h  \
+   REXXIPCR.MAK
+
+REXXPROC.OBJ:  REXXPROC.C  \
+#  {$(INCLUDE000)}rexxsaa.h  \
+#  {$(INCLUDE000)}stdlib.h  \
+#  {$(INCLUDE000)}string.h  \
+#  {$(INCLUDE000)}float.h  \
+   {$(INCLUDE001)}rxapiutl.h  \
+   {$(INCLUDE001)}rexxipc.h  \
+   REXXIPCR.MAK
+
+REXXQ.OBJ:  REXXQ.C  \
+#  {$(INCLUDE000)}rexxsaa.h  \
+#  {$(INCLUDE000)}stdlib.h  \
+#  {$(INCLUDE000)}string.h  \
+   {$(INCLUDE001)}rxapiutl.h  \
+   {$(INCLUDE001)}rexxipc.h  \
+   {$(INCLUDE001)}rexxsem.h  \
+   REXXIPCR.MAK
+
+REXXSEM.OBJ:  REXXSEM.C  \
+#  {$(INCLUDE000)}rexxsaa.h  \
+   {$(INCLUDE001)}rxapiutl.h  \
+   {$(INCLUDE001)}rexxsem.h  \
+   REXXIPCR.MAK
+
+RXAPIUTL.OBJ:  RXAPIUTL.C  \
+#  {$(INCLUDE000)}rexxsaa.h  \
+#  {$(INCLUDE000)}stdlib.h  \
+#  {$(INCLUDE000)}ctype.h  \
+#  {$(INCLUDE000)}string.h  \
+   {$(INCLUDE001)}rxapiutl.h  \
+   REXXIPCR.MAK
